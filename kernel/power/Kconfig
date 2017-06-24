@@ -329,3 +329,15 @@ config SUSPEND_TIME
 config DEDUCE_WAKEUP_REASONS
 	bool
 	default n
+#lenovo.sw chenyb1 20150310 add for pm log begin
+config PM_SYNC_BEFORE_SUSPEND
+	bool "Sync file systems before suspend"
+	depends on PM
+	default y
+config LENOVO_PM_LOG
+	def_bool y
+    
+config LENOVO_PM_LOG_TLMM
+	def_bool n
+	depends on LENOVO_PM_LOG
+#lenovo.sw chenyb1 20150310 add for pm log end

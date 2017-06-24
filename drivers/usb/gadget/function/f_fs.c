@@ -27,6 +27,7 @@
 
 #include <linux/usb/composite.h>
 #include <linux/usb/functionfs.h>
+#include <linux/freezer.h>
 
 #include <linux/aio.h>
 #include <linux/mmu_context.h>
@@ -750,7 +751,7 @@ retry:
 		 * and wait for next epfile open to happen
 		 */
 		if (!atomic_read(&epfile->error)) {
-			ret = wait_event_interruptible(epfile->wait,
+			ret = wait_event_freezable(epfile->wait,
 					(ep = epfile->ep));
 			if (ret < 0)
 				goto error;
