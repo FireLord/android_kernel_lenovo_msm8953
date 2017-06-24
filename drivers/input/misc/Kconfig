@@ -260,7 +260,6 @@ config INPUT_EPL8802
 	  To compile this driver as a module, choose M here: the
 	  module will be called EPL8802.
 # lenovo-sw caoyi1 add for sensor 20160222 end
->>>>>>> e473722... Import p2a42_osc_v2.0_201705 | 3.18.31
 
 config INPUT_APANEL
 	tristate "Fujitsu Lifebook Application Panel buttons"
