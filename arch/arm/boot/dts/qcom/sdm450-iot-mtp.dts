@@ -16,7 +16,6 @@
 #include "sdm450.dtsi"
 #include "msm-pmi8950.dtsi"
 #include "msm8953-mtp.dtsi"
-#include "msm8953-pmi8950.dtsi"
 #include "msm8953-camera-sensor-mtp.dtsi"
 
 / {
